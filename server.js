@@ -15,9 +15,9 @@ function getHeadline(req, res, next) {
 }
 
 function parseSentence(req, res, next) {
-    console.log('parseSentence()');
+    console.log('parseSentence():', req.query.expression);
 
-    generator.getHeadline(req.query.sentence).done(function (sentence) {
+    generator.getHeadline(req.query.expression).done(function (sentence) {
         var value = {
             headline: sentence
         };

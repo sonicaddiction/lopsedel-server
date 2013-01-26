@@ -142,6 +142,8 @@ function deleteWord(id) {
             return;
         }
 
+        console.log('Removed word', response);
+
         deferred.resolve()
     });
 
